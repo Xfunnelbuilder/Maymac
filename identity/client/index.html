@@ -26,9 +26,9 @@
 
         // Set your publishable key: remember to change this to your live publishable key in production
         // Find your keys here: https://dashboard.stripe.com/apikeys
-        const {publishableKey} = await fetch('/config').then(r=>r.json());
-        const stripe = Stripe(publishableKey);
-
+       const {publishableKey} = await fetch('/config').then(r=>r.json());
+       const stripe = Stripe(publishableKey);
+        
         var verifyButton = document.getElementById('verify-button');
         verifyButton.addEventListener('click', async () => {
           // Get the VerificationSession client secret using the server-side
